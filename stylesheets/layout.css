@@ -16,7 +16,10 @@
 	
 /* #Site Styles
 ================================================== */
-
+.container::before{
+	content: "/* #Site Styles 960px";
+	background-color: green;
+}
 /* #Page Styles
 ================================================== */
 
@@ -24,25 +27,64 @@
 ================================================== */
 	
 	/* iPad Portrait/Browser */
-	@media only screen and (min-width: 768px) and (max-width: 991px) {}
+	@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	.container::before{
+		content: "/* iPad Portrait/Browser 768px */";
+		color: white;
+		background-color: purple;
+	}
+	}
 	
 	/* Mobile/Browser */
-	@media only screen and (max-width: 767px) {}
+	@media only screen and (max-width: 767px) {
+	
+	.container::before{
+		content: "/* Mobile/Browser width: 300px */";
+		background-color: yellow;
+	}
+	}
 	
 	/* Mobile Landscape/Browser */
-	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
 	
-	/* Anything smaller than standard 960 */
-	@media only screen and (max-width: 959px) {}
+	.container::before{
+		content: "/* Mobile Landscape/Browser width: 420px */";
+		background-color: black;
+		color: white;
+	}
+	}
 	
-	/* iPad Portrait Only */
+	
+	/*
+	/* Anything smaller than standard 960 *!/
+	@media only screen and (max-width: 959px) {
+	.container::before{
+		/*content: "/* Anything smaller than standard 960 *!/";*!/
+	}
+	}*/
+	
+	
+	
+	/* iPad Portrait Only 
 	@media only screen and (min-width: 768px) and (max-width: 991px) and (max-device-width: 1000px) {}
 	
-	/* Mobile Only */
-	@media only screen and (max-width: 767px) and (max-device-width: 1000px) {}
+	 Mobile Only 
+	@media only screen and (max-width: 767px) and (max-device-width: 1000px) {
 	
-	/* Mobile Landscape Only */
-	@media only screen and (min-width: 480px) and (max-width: 767px) and (max-device-width: 1000px) {}
+	.container::before{
+		content: "/* Mobile Only *!/";
+	}*!/
+	
+	}
+	
+	 Mobile Landscape Only 
+	@media only screen and (min-width: 480px) and (max-width: 767px) and (max-device-width: 1000px) {
+	.container::before{
+		content: "/* Mobile Landscape Only ";
+	}*!/
+	
+	}*/
 	
 
 /* #Font-Face
