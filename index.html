@@ -48,11 +48,23 @@
 	
 	<!-- Delete everything in this .container and get started on your own site! -->
 
-	<div class="container container-sixteen">	
-		<div class="sixteen columns">
+	<div class="container container-twelve">	
+		<div class="twelve columns">
 			<h1 class="remove-bottom" style="margin-top: 40px">Skeleton</h1>
 			<h5>Version 1.0.2</h5>
 			<hr />
+		</div>
+		<div class="twelve columns">
+			<div id="masthead" class="two columns offset-by-one">
+				<header><h1>Page Title</header>
+			</div>
+			<div id="nav-main" class="eight columns">
+			<ul id="nav">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li></ul>
+			</div>
 		</div>
 		<div class="one-third column">
 			<h3>About Skeleton?</h3>	
@@ -83,6 +95,56 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
 	<script>window.jQuery || document.write("<script src='javascripts/jquery-1.5.1.min.js'>\x3C/script>")</script>
 	<script src="javascripts/app.js"></script>
+	<script src="javascripts/hugrid.js"></script>
+	
+	<script type="text/javascript">
+	    definegrid = function() {
+	        var browserWidth = $(window).width(); 
+	        if (browserWidth >= 1001) 
+	        {
+	            pageUnits = 'px';
+	            colUnits = 'px';
+	            pagewidth = 940;
+	            columns = 12;
+	            columnwidth = 60;
+	            gutterwidth = 20;
+	            pagetopmargin = 0;
+	            rowheight = 24;
+	            makehugrid();
+	        } 
+	        if (browserWidth <= 1000) 
+	        {
+	            pageUnits = 'px';
+	            colUnits = 'px';
+	            pagewidth = 748;
+	            columns = 12;
+	            columnwidth = 44;
+	            gutterwidth = 20;
+	            pagetopmargin = 0;
+	            rowheight = 24;
+	            makehugrid();
+	    }
+	        if (browserWidth <= 768) 
+	        {
+	            pageUnits = 'px';
+	            colUnits = 'px';
+	            pagewidth = 748;
+	            columns = 12;
+	            columnwidth = 44;
+	            gutterwidth = 20;
+	            pagetopmargin = 0;
+	            rowheight = 24;
+	            makehugrid();		        }
+	    }
+	    $(document).ready(function() {
+	        definegrid();
+	        setgridonload();
+	    });    
+	
+	    $(window).resize(function() {
+	        definegrid();
+	    });
+	</script>
 	
 <!-- End Document
 ================================================== -->
