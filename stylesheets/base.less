@@ -31,9 +31,15 @@
 		border: 0;
 		font-size: 100%;
 		font: inherit;
-		vertical-align: baseline; }
-	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-		display: block; }
+		vertical-align: baseline;
+		-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+		 }
+	article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+	audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+	audio:not([controls]) { display: none; }
+	[hidden] { display: none; }
+	
 	body {
 		line-height: 1; }
 	ol, ul {
@@ -51,6 +57,7 @@
 		
 /* #Basic Styles
 ================================================== */
+
 	body { 
 		background: #fff;
 		font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -102,6 +109,7 @@
 
 /* #Lists
 ================================================== */
+	nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 	ul, ol { margin-bottom: 20px; }
 	ul { list-style: none outside; }
 	ol { list-style: decimal; }
@@ -119,6 +127,8 @@
 	
 /* #Images
 ================================================== */
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
 /*
 	The purpose of the below declaration is to make sure images don't 
 	exceed the width of columns they are put into when resizing window. 
@@ -340,5 +350,15 @@
 	.half-bottom { margin-bottom: 10px !important; }
 	.add-bottom { margin-bottom: 20px !important; }
 
+/* ==|== non-semantic helper classes ======================================== */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
 		
 	
